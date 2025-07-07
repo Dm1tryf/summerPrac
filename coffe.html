@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир кофе и латте-арта</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Мир кофе и латте-арта</h1>
+        <p>Откройте для себя разнообразие кофейных напитков и искусство рисования на пенке</p>
+    </header>
+
+    <main>
+        <section class="coffee-types">
+            <h2>Популярные виды кофе</h2>
+            <div class="gallery">
+                <div class="coffee-item">
+                    <img src="images/espresso.jpg" alt="Эспрессо">
+                    <h3>Эспрессо</h3>
+                    <p>Крепкий кофе, приготовленный под давлением горячей воды.</p>
+                </div>
+                <div class="coffee-item">
+                    <img src="images/americano.jpg" alt="Американо">
+                    <h3>Американо</h3>
+                    <p>Эспрессо, разбавленный горячей водой.</p>
+                </div>
+                <div class="coffee-item">
+                    <img src="images/cappuccino.jpg" alt="Капучино">
+                    <h3>Капучино</h3>
+                    <p>Эспрессо с молоком и молочной пенкой в равных пропорциях.</p>
+                </div>
+                <div class="coffee-item">
+                    <img src="images/latte.jpg" alt="Латте">
+                    <h3>Латте</h3>
+                    <p>Больше молока и меньше кофе, с нежной пенкой сверху.</p>
+                </div>
+                <div class="coffee-item">
+                    <img src="images/raff.jpg" alt="Раф">
+                    <h3>Раф</h3>
+                    <p>Кофе с ванильным сахаром и сливками, взбитыми паром.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="video-buttons">
+                <button id="brewing-btn" class="video-btn">Как заваривать кофе</button>
+                <button id="art-btn" class="video-btn">Рисование на пенке</button>
+            </div>
+            
+            <div class="video-container">
+                <video id="coffee-video" controls>
+                    <source src="videos/brewing.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Мир кофе и латте-арта. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.getElementById('brewing-btn').addEventListener('click', function() {
+            const video = document.getElementById('coffee-video');
+            video.src = 'videos/brewing.mp4';
+            video.load();
+            video.play();
+        });
+
+        document.getElementById('art-btn').addEventListener('click', function() {
+            const video = document.getElementById('coffee-video');
+            video.src = 'videos/latte-art.mp4';
+            video.load();
+            video.play();
+        });
+    </script>
+</body>
+</html>
